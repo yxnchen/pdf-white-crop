@@ -12,7 +12,7 @@
 * **无损保存：** 裁剪过程仅调整PDF的显示视口，不会对原始内容造成质量损失（非光栅化处理）。
 * **操作简便：** 直观的用户界面，几步即可完成裁剪任务。
 
-![](screenshots\main-page.png)
+![](https://github.com/yxnchen/pdf-white-crop/blob/main/screenshots/main-page.png)
 
 ---
 
