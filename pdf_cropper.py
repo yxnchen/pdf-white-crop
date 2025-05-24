@@ -62,7 +62,7 @@ def find_content_bounding_box(page: fitz.Page, margin: int = 5) -> fitz.Rect | N
     images = page.get_images(full=True) # 获取图片
     for img_info in images:
         # img_info 是一个元组，包含图片的xref和bbox
-        bbox = fitz.Rect(fitz.utils.get_image_rects(page, img_info[0]))
+        bbox = page.get_image_bbox(img_info) # 获取图片的边界框
         update_bounds(bbox)
     
     # 3. 检查矢量图形
