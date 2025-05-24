@@ -102,7 +102,7 @@ def find_content_bounding_box(page: fitz.Page, margin: int = 5) -> fitz.Rect | N
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="自动裁剪PDF文件四周的空白")
     parser.add_argument("--input_pdf", required=True, help="输入PDF文件路径")
-    parser.add_argument("--postfix", default="_cropped", help="裁剪后文件的后缀")
+    parser.add_argument("--suffix", default="_cropped", help="裁剪后文件的后缀")
     args = parser.parse_args()
 
     # 检查输入文件是否存在
@@ -118,7 +118,7 @@ if __name__ == "__main__":
     # 组织输出文件路径
     input_dir, input_filename = os.path.split(args.input_pdf)
     input_name, input_ext = os.path.splitext(input_filename)
-    output_filename = f"{input_name}{args.postfix}{input_ext}"
+    output_filename = f"{input_name}{args.suffix}{input_ext}"
     output_pdf = os.path.join(input_dir, output_filename)
 
     # 调用裁剪函数
