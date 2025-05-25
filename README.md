@@ -23,6 +23,7 @@
 * **Python:** 编程语言。
 * **PyMuPDF (fitz):** 强大的PDF处理库，用于PDF的读取、内容分析和裁剪。
 * **CustomTkinter:** 基于Tkinter的美观UI框架，用于构建现代化桌面界面。
+* **TkinterDnD2** 实现拖拽上传功能。
 
 ---
 
@@ -43,7 +44,7 @@
 ### CLI
 
 ```bash
-usage: pdf_cropper.py [-h] --input_pdf INPUT_PDF [--suffix SUFFIX]
+usage: pdf_cropper.py [-h] --input_pdf INPUT_PDF [--suffix SUFFIX] [--margin MARGIN] [--export_per_page]
 
 自动裁剪PDF文件四周的空白
 
@@ -52,6 +53,8 @@ options:
   --input_pdf INPUT_PDF
                         输入PDF文件路径
   --suffix SUFFIX       裁剪后文件的后缀
+  --margin MARGIN       裁剪时的内边距，单位为点
+  --export_per_page     是否为每一页单独导出裁剪后的PDF
 ```
 
 ---
@@ -64,6 +67,12 @@ options:
 ---
 
 ## 📜 变更记录
+
+### 版本 v0.1.1
+* 新增清空文件列表按钮
+* 文件清单改为列表风格，并提供按钮打开所在目录和移除
+* 文件列表支持拖拽上传
+* 新增“每页导出为单独文件”选项
 
 ### 版本 v0.1
 
